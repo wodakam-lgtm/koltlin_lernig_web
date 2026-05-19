@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podsumowanie Quizu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Mój Super Quiz</h1>
+        <p>Kliknij przycisk poniżej, aby symulować zakończenie quizu i zobaczyć dynamiczny footer.</p>
+        <button class="btn-submit" onclick="finishQuiz()">Zakończ Quiz i Pokaż Wynik</button>
+    </div>
+
+    <footer id="quizFooter" class="quiz-footer">
+        <div class="footer-content">
+            <div class="result-info">
+                <h2 id="feedbackTitle">Świetny wynik!</h2>
+                <p id="feedbackMessage">Gratulacje, znasz się na rzeczy!</p>
+            </div>
+            
+            <div class="score-badge">
+                <span>Twój wynik:</span>
+                <div>
+                    <span id="userScore" class="score-number">0</span>
+                    <span class="score-max">/ <span id="maxScore">10</span></span>
+                </div>
+            </div>
+
+            <button class="btn-restart" onclick="restartQuiz()">Zagraj ponownie</button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Reset i style ogólne strony */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    min-height: 100vh;
+    padding-bottom: 120px; /* Przestrzeń, żeby footer nie zasłaniał treści quizu */
+}
+
+/* Kontener na przykładowy quiz */
+.quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* --- STYLE FOOTERA (PODSUMOWANIA) --- */
+.quiz-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #1e272e, #2c3e50);
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0 -5px 25px rgba(0,0,0,0.2);
+    transform: translateY(100%); /* Domyślnie schowany pod ekranem */
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+}
+
+/* Klasa aktywująca pokazanie footera */
+.quiz-footer.show {
+    transform: translateY(0);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.result-info h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #00d2d3;
+}
+
+.result-info p {
+    font-size: 14px;
+    color: #c8d6e5;
+}
+
+/* Licznik punktów i Badge */
+.score-badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.score-number {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1dd1a1;
+}
+
+.score-max {
+    font-size: 16px;
+    color: #95a5a6;
+}
+
+/* Przycisk restartu */
+.btn-restart {
+    background-color: #1dd1a1;
+    color: #1e272e;
+    border: none;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-restart:hover {
+    background-color: #10ac84;
+    transform: scale(1.05);
+}
+
+/* Responsywność dla urządzeń mobilnych */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .score-badge {
+        width: 100%;
+        justify-content: center;
+    }
+    .btn-restart {
+        width: 100%;
+    }
+}
